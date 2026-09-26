@@ -1,0 +1,2 @@
+# Intelego
+Intelego static webpage
