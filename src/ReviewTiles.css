@@ -1,0 +1,62 @@
+/* ReviewTiles.css */
+.review-tiles {
+  padding: 80px 20px;
+  max-width: 1100px;
+  height: 75vh;
+  margin: 0 auto;
+}
+
+.review-tiles__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.review-tiles__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.review-tile {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* Initial state: offset + invisible */
+  opacity: 0;
+  transform: translate(var(--from-x), var(--from-y)) scale(0.9);
+
+  transition:
+    opacity 0.5s ease-out var(--delay),
+    transform 0.5s ease-out var(--delay);
+}
+
+.review-tile--in {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.review-tile__stars {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.review-tile__text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.review-tile__name {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+}   

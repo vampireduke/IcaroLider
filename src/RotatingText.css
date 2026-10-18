@@ -1,0 +1,19 @@
+.rotating-text {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.rotating-text__inner {
+  display: flex;
+  align-items: center;
+}
+
+.rotating-text__split {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.rotating-text__element {
+  display: inline-block;
+}

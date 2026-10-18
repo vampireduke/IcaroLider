@@ -1,0 +1,15 @@
+/* SocialLinks.css */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}   

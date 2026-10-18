@@ -1,0 +1,81 @@
+/* ContactForm.css */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  height: 92vh;
+  box-sizing: border-box;
+  padding: 7rem;
+}
+
+.contact-form--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left column */
+.contact-form__info {
+  text-align: center;
+}
+
+.contact-form__image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 7px;
+  margin-bottom: -1rem;
+  margin-top: -5rem;
+}
+
+.contact-form__info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form__details {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+/* Right column */
+.contact-form__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form__inner label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-form__inner input,
+.contact-form__inner textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form__inner button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Mobile: stack */
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
+}   
+

@@ -1,0 +1,66 @@
+/* DriftCards.css */
+.drift-container {
+  position: relative;
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0f0f1a;
+}
+
+.drift-image {
+  width: 55%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 0 80px rgba(100, 120, 255, 0.15);
+  z-index: 1;
+}
+
+.drift-card {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 22px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: drift 6s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.drift-card__value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  white-space: pre-line;
+}
+
+.drift-card__label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: pre-line;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(6px, -10px) rotate(0.5deg);
+  }
+  66% {
+    transform: translate(-4px, 6px) rotate(-0.3deg);
+  }
+  100% {
+    transform: translate(3px, -4px) rotate(0.2deg);
+  }
+}   
